@@ -9,7 +9,7 @@ function App() {
 
       <Form />
       <p>link to my github repository
-      <a href="https://nmaryy.github.io/weather-react-vite/"> click here </a>
+      <a href="https://github.com/nmaryy/weather-react-vite"> click here </a>
 
       </p>
     </div>
