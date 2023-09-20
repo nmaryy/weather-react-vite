@@ -10,14 +10,20 @@ function handleResponse (response) {
   setWeatherData({
     ready : true,
     coords : response.data.coord,
-    temp : response.data.main.temp,
+    // sunset : response.data.sys.sunset * 1000,
+    feels : response.data.main.feels_like,
+    press : response.data.main.pressure,
+    temp : Math.round(response.data.main.temp),
     humid: response.data.main.humidity,
     date: new Date(response.data.dt * 1000),
     desc: response.data.weather[0].description,
     icon: response.data.weather[0].icon,
     wind: response.data.wind.speed,
     city: response.data.name,
+    country: response.data.sys.country,
+    vis: response.data.visibility,
   })
+  console.log(response)
 
 }
 
