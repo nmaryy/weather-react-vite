@@ -1,17 +1,18 @@
+import "bootstrap/dist/css/bootstrap.css"
 import './App.css'
-import Form from "./Form"
+// import Form from "./Form"
+// import Result from "./Result"
+import Format from "./Format"
+import Daily from "./Daily"
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Weather Search Engine</h1>
 
-      <Form />
-      <p>link to my github repository
-      <a href="https://github.com/nmaryy/weather-react-vite"> click here! </a>
-
-      </p>
+    {/* <Result/> */}
+    <Format defaultCity="Berlin"/>
+    <Daily/>
     </div>
   )
 }

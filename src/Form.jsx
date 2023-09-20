@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+// import Date from "./Date";
 const key = "6e6ec494746b5229a9f2d526478c924c";
 
 export default function Form(props) {
@@ -19,12 +20,14 @@ export default function Form(props) {
   }
 
   function display(response) {
-    setTemp(Math.round(response.data.main.temp));
+    setTemp({
+      temprature: Math.round(response.data.main.temp),
+    date: new Date(response.data.dt * 1000)});
   }
 
   return (
     <>
-      {temp === null ? (
+      {temp.temprature === null ? (
         <div className="Form">
           <form onSubmit={handle}>
             <input
@@ -45,8 +48,9 @@ export default function Form(props) {
             />
             <input type="submit" value="Search" />
           </form>
+          {/* <Date info = {temp.date} /> */}
           <h3>
-            The temperature in {city} is {temp}°C
+            The temperature in {city} is {temp.temprature}°C
           </h3>
         </div>
       )}
