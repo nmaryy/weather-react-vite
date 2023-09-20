@@ -135,8 +135,15 @@ App.body {
   width: 80%;
 }
 
+
+.Date {
+  line-height: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(49, 48, 48, 0.46);
+}
 .Result .briefs {
-  line-height: 80px;
+  line-height: 60px;
   margin-right: 60px;
   width: 40%;
 }
