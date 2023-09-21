@@ -5,7 +5,7 @@ import Icon from "./Icon";
 
 export default function Result(props) {
     return(        
-    <div className="Result col-3">
+    <div className="Result col-2">
         <div className="briefs">
       <p>Link to my <a href="https://github.com/nmaryy/weather-react-vite">github</a></p>
          <Date date={props.data.date}/>

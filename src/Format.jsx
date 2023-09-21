@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Result from "./Result";
-// import Date from "./Date";
+import ForcastTotal from "./ForcastTotal";
 
 export default function Format(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -47,7 +47,8 @@ function handleResponse (response) {
     return (
       <div className="Format ">
             <Result data={weatherData}/>
-        <div className="second col-3">
+            <div className="orient">
+        <div className="second col-2">
           <ul>
             <li>Weather</li>
             <li>
@@ -69,6 +70,8 @@ function handleResponse (response) {
                 <input type="submit" value="Search" id="btn" className="btn" />
               </form>
               {/* <button id="btncurr" className="btn">Current Location</button> */}
+        </div>
+          <ForcastTotal coordinates = {weatherData.coords}/>
         </div>
     </div>
     );
